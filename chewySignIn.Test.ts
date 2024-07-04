@@ -12,12 +12,12 @@ test('making sure I can sign in', async () => {
     await chewy.navigate();
     await chewy.click(chewy.signIn);
     await chewy.click(chewy.forgotPassword);
-    // NEED HELP - HOW TO GO BACK
+    await chewy.driver.navigate().back();
     await chewy.click(chewy.signIn);
     await chewy.click(chewy.continueWGoogle);
-    //NEED HELP - HOW TO GO BACK
+    await chewy.driver.navigate().back();
     await chewy.click(chewy.signIn);
     await chewy.click(chewy.continueWApple);
-    //NEED HELP - HOW TO GO BACK
+    await chewy.driver.navigate().back();
     await chewy.driver.quit();
 });
